@@ -180,7 +180,7 @@ export default function WeddingInvite() {
             <p className="text-white text-4xl mt-6">
                 Dear <span className="font-semibold">{toTitleCase(guestName)}</span>,
             </p>
-            <p className="mt-2 font-serif text-lg text-white font-normal md:mb-20 mb-10 md:max-w-7xl max-w-[60svw]">
+            <p className="mt-2  text-lg text-white font-normal md:mb-20 mb-10 md:max-w-7xl max-w-[60svw]">
                 With joyful hearts, we invite you to witness our forever
             </p>
             <Image
@@ -232,7 +232,7 @@ export default function WeddingInvite() {
 
 
             {isOpened && (
-                <main className="font-serif bg-[#5a1a24] text-[#5a1a24] w-screen overflow-x-hidden">
+                <main className=" bg-[#5a1a24] text-[#5a1a24] w-screen overflow-x-hidden">
                     {/* HERO */}
                     <section className="grid md:grid-cols-2 gap-0 min-h-screen">
                         <motion.div
@@ -256,7 +256,7 @@ export default function WeddingInvite() {
                             transition={{ duration: 0.8, delay: 1 }}
                             className="bg-[#6d1221] text-white flex flex-col justify-center items-center text-center p-10"
                         >
-                            <h1 className="hidden font-serif text-4xl md:text-5xl mb-4">
+                            <h1 className="hidden  text-4xl md:text-5xl mb-4">
                                 Luke <br /> & Lavinia
                             </h1>
                             <Image
@@ -519,7 +519,7 @@ export default function WeddingInvite() {
                         transition={{ duration: 1 }}
                         className="bg-[#c9a36a] text-center py-10"
                     >
-                        <p className="font-serif text-xl">
+                        <p className=" text-xl">
                             Thank You So Much
                         </p>
                         <Image
