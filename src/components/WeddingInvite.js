@@ -289,6 +289,14 @@ export default function WeddingInvite() {
                         variants={staggerContainer}
                         className="text-center py-16 bg-[#c9a36a] min-h-screen flex flex-col justify-center md:px-0 px-5"
                     >
+                        <Image
+                            src='/icons/Untitled-2-02.svg'
+                            alt="Wedding Cake"
+                            height='0'
+                            width='0'
+                            sizes="100svw"
+                            className="w-auto md:h-[25svh] h-[25svh] mx-auto mb-5"
+                        />
                         <motion.h2 variants={fadeUp} whileInView="visible" viewport={{ once: true }} className="font-semibold mb-6 text-5xl">It’s our wedding!</motion.h2>
                         <p className={`text-xl leading-6 ${playfair.className}`}>Two are better than one…</p>
                         <p className={`text-xl leading-6 px-10 ${playfair.className}`}>If either of them falls, one can help the other up <br /> <span className="text-sm">~ Ecclesiastes 4:9–10</span></p>
@@ -329,9 +337,19 @@ export default function WeddingInvite() {
                         variants={fadeIn}
                         className="bg-[#6d1221] py-16 px-6 max-w-screen overflow-x-hidden"
                     >
-                        <h3 className="text-white text-4xl font-bold text-center mb-2">
-                            Our Sweet Love
-                        </h3>
+                        <div className="flex flex-row justify-center items-center gap-0">
+                            <Image
+                                src='/icons/Untitled-2-01.svg'
+                                alt="Wedding Rings"
+                                height='0'
+                                width='0'
+                                sizes="100svh"
+                                className="md:w-20 w-12 md:h-20 h-12 md:mb-4 mb-2 mr-3"
+                            />
+                            <h3 className="text-white text-4xl font-bold text-left mb-2">
+                                Our Sweet Love
+                            </h3>
+                        </div>
                         <p className={`text-white font-light text-center mb-8 max-w-2xl mx-auto ${playfair.className}`}>
                             Love creates moments that last a lifetime. We are honored to share these unforgettable memories with you.
                         </p>
@@ -369,6 +387,14 @@ export default function WeddingInvite() {
                         variants={fadeUp}
                         className="py-16 md:px-0 px-10 text-center bg-[#c9a36a] min-h-[80svh] flex flex-col justify-center"
                     >
+                        <Image
+                            src='/icons/wine-glasses.svg'
+                            alt="Wedding Cake"
+                            height='0'
+                            width='0'
+                            sizes="100svw"
+                            className="w-auto md:h-[25svh] h-[25svh] mx-auto mb-5"
+                        />
                         {!successMessage && <h3 className="font-semibold mb-4 text-3xl">Confirm Attendance</h3>}
                         {!successMessage && <p className={`text-sm mb-8 max-w-2xl mx-auto ${playfair.className}`}>
                             We are delighted to invite you to join us on one of the happiest days of our lives.
@@ -439,7 +465,17 @@ export default function WeddingInvite() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
                             >
-                                <h3 className="font-semibold mb-3 text-4xl">Ceremony</h3>
+                                <div className="flex flex-row justify-center items-center gap-0 -ml-6">
+                                    <Image
+                                        src='/icons/ceremony.svg'
+                                        alt="Ceremony"
+                                        height='0'
+                                        width='0'
+                                        sizes="100svh"
+                                        className="md:w-16 w-16 md:h-16 h-16 md:mb-4 mb-4 mr-1"
+                                    />
+                                    <h3 className="font-semibold mb-3 text-4xl">Ceremony</h3>
+                                </div>
                                 <p>Religious ceremony<br />in Grotto Chapel</p>
                                 {/* <p>14th February</p> */}
                                 <p>1:00 PM</p>
@@ -469,7 +505,17 @@ export default function WeddingInvite() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
                             >
-                                <h3 className="font-semibold mb-3 text-4xl">Reception</h3>
+                                <div className="flex flex-row justify-center items-center gap-0 -ml-6">
+                                    <Image
+                                        src='/icons/reception.svg'
+                                        alt="Reception"
+                                        height='0'
+                                        width='0'
+                                        sizes="100svh"
+                                        className="md:w-20 w-16 md:h-20 h-16 md:mb-4 mb-4 mr-3"
+                                    />
+                                    <h3 className="font-semibold mb-3 text-4xl">Reception</h3>
+                                </div>
                                 <p>Garrison Ground</p>
                                 {/* <p>14th February</p> */}
                                 <p>5:00 PM onwards</p><br />
@@ -515,7 +561,17 @@ export default function WeddingInvite() {
 
                     {/* GIFTS */}
                     <section className="py-12 text-center px-6 bg-[#6d1221] text-[#c9a36a]">
-                        <h3 className="font-semibold text-xl mb-4">Gifts</h3>
+                        <div className="flex flex-row justify-center items-center gap-0 -ml-6">
+                            <Image
+                                src='/icons/gifts.svg'
+                                alt="Gifts"
+                                height='0'
+                                width='0'
+                                sizes="100svh"
+                                className="md:w-20 w-12 md:h-20 h-12 md:mb-4 mb-2 mr-3"
+                            />
+                            <h3 className="font-semibold text-4xl">Gifts</h3>
+                        </div>
                         <p className={`text-sm max-w-xl mx-auto ${playfair.className}`}>
                             Your presence is the greatest gift. Should you wish to offer a token of blessing, an envelope is appreciated
                         </p>
