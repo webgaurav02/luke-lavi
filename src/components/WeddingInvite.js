@@ -4,6 +4,16 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { useRef } from "react";
 
+import {
+    Playfair_Display,
+} from 'next/font/google';
+
+const playfair = Playfair_Display({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+    variable: '--font-playfair',
+});
+
 
 import Image from "next/image";
 
@@ -280,8 +290,8 @@ export default function WeddingInvite() {
                         className="text-center py-16 bg-[#c9a36a] min-h-screen flex flex-col justify-center md:px-0 px-5"
                     >
                         <motion.h2 variants={fadeUp} whileInView="visible" viewport={{ once: true }} className="font-semibold mb-6 text-5xl">It’s our wedding!</motion.h2>
-                        <p className="text-xl leading-6">Two are better than one…</p>
-                        <p className="text-xl leading-6 px-10">If either of them falls, one can help the other up <br /> <span className="text-sm">~ Ecclesiastes 4:9–10</span></p>
+                        <p className={`text-xl leading-6 ${playfair.className}`}>Two are better than one…</p>
+                        <p className={`text-xl leading-6 px-10 ${playfair.className}`}>If either of them falls, one can help the other up <br /> <span className="text-sm">~ Ecclesiastes 4:9–10</span></p>
                         <p className="mb-6 mt-28 text-2xl font-bold">The Wedding begins in…</p>
 
                         <div className="flex justify-center gap-4 flex-wrap">
@@ -322,10 +332,10 @@ export default function WeddingInvite() {
                         <h3 className="text-white text-4xl font-bold text-center mb-2">
                             Our Sweet Love
                         </h3>
-                        <p className="text-white text-center mb-8 max-w-2xl mx-auto">
+                        <p className={`text-white font-light text-center mb-8 max-w-2xl mx-auto ${playfair.className}`}>
                             Love creates moments that last a lifetime. We are honored to share these unforgettable memories with you.
                         </p>
-                        
+
 
                         <div className="relative">
                             {/* Slider */}
@@ -360,7 +370,7 @@ export default function WeddingInvite() {
                         className="py-16 md:px-0 px-10 text-center bg-[#c9a36a] min-h-[80svh] flex flex-col justify-center"
                     >
                         {!successMessage && <h3 className="font-semibold mb-4 text-3xl">Confirm Attendance</h3>}
-                        {!successMessage && <p className="text-sm mb-8 max-w-2xl mx-auto">
+                        {!successMessage && <p className={`text-sm mb-8 max-w-2xl mx-auto ${playfair.className}`}>
                             We are delighted to invite you to join us on one of the happiest days of our lives.
                             Nothing would make us happier than celebrating this special day with you.
                         </p>}
@@ -505,8 +515,8 @@ export default function WeddingInvite() {
 
                     {/* GIFTS */}
                     <section className="py-12 text-center px-6 bg-[#6d1221] text-[#c9a36a]">
-                        <h3 className="font-semibold mb-4">Gifts</h3>
-                        <p className="text-sm max-w-xl mx-auto">
+                        <h3 className="font-semibold text-xl mb-4">Gifts</h3>
+                        <p className={`text-sm max-w-xl mx-auto ${playfair.className}`}>
                             Your presence is the greatest gift. Should you wish to offer a token of blessing, an envelope is appreciated
                         </p>
                     </section>
