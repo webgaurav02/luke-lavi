@@ -232,7 +232,7 @@ export default function WeddingInvite() {
 
 
             {isOpened && (
-                <main className="bg-[#5a1a24] text-[#5a1a24] w-screen overflow-x-hidden">
+                <main className="font-serif bg-[#5a1a24] text-[#5a1a24] w-screen overflow-x-hidden">
                     {/* HERO */}
                     <section className="grid md:grid-cols-2 gap-0 min-h-screen">
                         <motion.div
@@ -277,11 +277,11 @@ export default function WeddingInvite() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={staggerContainer}
-                        className="text-center py-16 px-4 bg-[#c9a36a] min-h-screen flex flex-col justify-center"
+                        className="text-center py-16 bg-[#c9a36a] min-h-screen flex flex-col justify-center md:px-0 px-5"
                     >
                         <motion.h2 variants={fadeUp} whileInView="visible" viewport={{ once: true }} className="font-semibold mb-6 text-5xl">It’s our wedding!</motion.h2>
                         <p className="text-xl leading-6">Two are better than one…</p>
-                        <p className="text-xl leading-6">If either of them falls, one can help the other up - Ecclesiastes 4:9–10</p>
+                        <p className="text-xl leading-6 px-10">If either of them falls, one can help the other up <br /> <span className="text-sm">~ Ecclesiastes 4:9–10</span></p>
                         <p className="mb-6 mt-28 text-2xl font-bold">The Wedding begins in…</p>
 
                         <div className="flex justify-center gap-4 flex-wrap">
@@ -325,10 +325,11 @@ export default function WeddingInvite() {
                         <p className="text-white text-center mb-8 max-w-2xl mx-auto">
                             Love creates moments that last a lifetime. We are honored to share these unforgettable memories with you.
                         </p>
+                        
 
                         <div className="relative">
                             {/* Slider */}
-                            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-2 w-screen mx-auto pr-16">
+                            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar pb-4 px-2 w-screen mx-auto pr-16">
                                 {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((i) => (
                                     <motion.div
                                         key={i}
@@ -336,7 +337,7 @@ export default function WeddingInvite() {
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.8 }}
-                                        className="relative min-w-[80%] sm:min-w-[45%] md:min-w-[30%] md:h-160 h-120 snap-center"
+                                        className="relative min-w-[90%] sm:min-w-[45%] md:min-w-[30%] md:h-160 h-120 snap-center"
                                     >
                                         <Image
                                             src={`/gallery/gallery${i}.jpg`}
@@ -356,7 +357,7 @@ export default function WeddingInvite() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeUp}
-                        className="py-16 px-6 text-center bg-[#c9a36a] min-h-[80svh] flex flex-col justify-center"
+                        className="py-16 md:px-0 px-10 text-center bg-[#c9a36a] min-h-[80svh] flex flex-col justify-center"
                     >
                         {!successMessage && <h3 className="font-semibold mb-4 text-3xl">Confirm Attendance</h3>}
                         {!successMessage && <p className="text-sm mb-8 max-w-2xl mx-auto">
@@ -420,7 +421,7 @@ export default function WeddingInvite() {
                     </motion.section>
 
                     {/* CEREMONY & RECEPTION */}
-                    <section className="bg-[#6d1221] text-white py-16 px-6 min-h-screen flex flex-col justify-center ">
+                    <section className="bg-[#6d1221] text-white py-16 px-6 min-h-[60svh] flex flex-col justify-center ">
                         <div className="max-w-5xl mx-auto grid md:grid-cols-2 md:gap-36 gap-10 text-center">
                             <motion.div
                                 initial={{ opacity: 0, x: -40 }}
@@ -429,8 +430,8 @@ export default function WeddingInvite() {
                                 transition={{ duration: 0.8 }}
                             >
                                 <h3 className="font-semibold mb-3 text-4xl">Ceremony</h3>
-                                <p>Religious ceremony in Grotto Chapel at 1:00 PM</p>
-                                <p>14th February</p>
+                                <p>Religious ceremony<br />in Grotto Chapel</p>
+                                {/* <p>14th February</p> */}
                                 <p>1:00 PM</p>
                                 <div className="mt-6 w-full max-w-sm mx-auto">
                                     <div className="relative aspect-square w-full overflow-hidden rounded-lg border border-white/20 shadow-lg hover:shadow-xl transition">
@@ -460,8 +461,8 @@ export default function WeddingInvite() {
                             >
                                 <h3 className="font-semibold mb-3 text-4xl">Reception</h3>
                                 <p>Garrison Ground</p>
-                                <p>14th February</p>
-                                <p>5:00 PM onwards</p>
+                                {/* <p>14th February</p> */}
+                                <p>5:00 PM onwards</p><br />
                                 <div className="mt-6 w-full max-w-sm mx-auto">
                                     <div className="relative aspect-square w-full overflow-hidden rounded-lg border border-white/20 shadow-lg hover:shadow-xl transition">
                                         <iframe
@@ -485,7 +486,7 @@ export default function WeddingInvite() {
                     </section>
 
                     {/* DRESS CODE */}
-                    <section className="py-16 px-6 text-center bg-[#c9a36a]">
+                    {/* <section className="py-16 px-6 text-center bg-[#c9a36a]">
                         <h3 className="font-semibold mb-6">Dress Code</h3>
                         <div className="bg-white inline-block px-10 py-6 rounded shadow">
                             <Image
@@ -500,7 +501,7 @@ export default function WeddingInvite() {
                                 Guidelines about the event dresscode
                             </p>
                         </div>
-                    </section>
+                    </section> */}
 
                     {/* GIFTS */}
                     <section className="py-12 text-center px-6 bg-[#6d1221] text-[#c9a36a]">
