@@ -329,6 +329,91 @@ export default function WeddingInvite() {
                         </div>
                     </motion.section>
 
+                    {/* CEREMONY & RECEPTION */}
+                    <section className="bg-[#6d1221] text-white py-16 px-6 min-h-[60svh] flex flex-col justify-center ">
+                        <div className="max-w-5xl mx-auto grid md:grid-cols-2 md:gap-36 gap-10 text-center">
+                            <motion.div
+                                initial={{ opacity: 0, x: -40 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                            >
+                                <div className="flex flex-row justify-center items-center gap-0 -ml-6">
+                                    <Image
+                                        src='/icons/ceremony.svg'
+                                        alt="Ceremony"
+                                        height='0'
+                                        width='0'
+                                        sizes="100svh"
+                                        className="md:w-16 w-16 md:h-16 h-16 md:mb-4 mb-4 mr-1"
+                                    />
+                                    <h3 className="font-semibold mb-3 text-4xl">Ceremony</h3>
+                                </div>
+                                <p>Religious ceremony<br />in Grotto Chapel</p>
+                                {/* <p>14th February</p> */}
+                                <p>1:00 PM</p>
+                                <div className="mt-6 w-full max-w-sm mx-auto">
+                                    <div className="relative aspect-square w-full overflow-hidden rounded-lg border border-white/20 shadow-lg hover:shadow-xl transition">
+                                        <iframe
+                                            className="absolute inset-0 w-full h-full"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4648.844822279911!2d91.88905907632365!3d25.56815097747407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507ebd35fdba2b%3A0xdff8f698878a1c8d!2sGrotto%20Chapel!5e0!3m2!1sen!2sin!4v1767597070538"
+                                            loading="lazy"
+                                            referrerPolicy="no-referrer-when-downgrade"
+                                        />
+                                    </div>
+                                </div>
+                                <a
+                                    href="https://www.google.com/maps/dir/?api=1&destination=25.568070104437144,91.89164639022468"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-4 inline-block border px-6 py-2 rounded text-sm hover:bg-white hover:text-[#6d1221] transition"
+                                >
+                                    Get Directions
+                                </a>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, x: -40 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                            >
+                                <div className="flex flex-row justify-center items-center gap-0 -ml-6">
+                                    <Image
+                                        src='/icons/reception.svg'
+                                        alt="Reception"
+                                        height='0'
+                                        width='0'
+                                        sizes="100svh"
+                                        className="md:w-20 w-16 md:h-20 h-16 md:mb-4 mb-4 mr-3"
+                                    />
+                                    <h3 className="font-semibold mb-3 text-4xl">Reception</h3>
+                                </div>
+                                <p>Garrison Ground</p>
+                                {/* <p>14th February</p> */}
+                                <p>5:00 PM onwards</p><br />
+                                <div className="mt-6 w-full max-w-sm mx-auto">
+                                    <div className="relative aspect-square w-full overflow-hidden rounded-lg border border-white/20 shadow-lg hover:shadow-xl transition">
+                                        <iframe
+                                            className="absolute inset-0 w-full h-full"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4648.86699557986!2d91.87652327632368!3d25.56757977747441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8562e7798f%3A0x402d6805c4dc4151!2sGarrison%20Ground!5e0!3m2!1sen!2sin!4v1767597096587!5m2!1sen!2sin"
+                                            loading="lazy"
+                                            referrerPolicy="no-referrer-when-downgrade"
+                                        />
+                                    </div>
+                                </div>
+                                <a
+                                    href="https://www.google.com/maps/dir/?api=1&destination=25.569355069199588,91.87811017998635"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-4 inline-block border px-6 py-2 rounded text-sm hover:bg-white hover:text-[#6d1221] transition"
+                                >
+                                    Get Directions
+                                </a>
+                            </motion.div>
+                        </div>
+                    </section>
+
                     {/* GALLERY */}
                     <motion.section
                         initial="hidden"
@@ -456,90 +541,6 @@ export default function WeddingInvite() {
                         </AnimatePresence>
                     </motion.section>
 
-                    {/* CEREMONY & RECEPTION */}
-                    <section className="bg-[#6d1221] text-white py-16 px-6 min-h-[60svh] flex flex-col justify-center ">
-                        <div className="max-w-5xl mx-auto grid md:grid-cols-2 md:gap-36 gap-10 text-center">
-                            <motion.div
-                                initial={{ opacity: 0, x: -40 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.8 }}
-                            >
-                                <div className="flex flex-row justify-center items-center gap-0 -ml-6">
-                                    <Image
-                                        src='/icons/ceremony.svg'
-                                        alt="Ceremony"
-                                        height='0'
-                                        width='0'
-                                        sizes="100svh"
-                                        className="md:w-16 w-16 md:h-16 h-16 md:mb-4 mb-4 mr-1"
-                                    />
-                                    <h3 className="font-semibold mb-3 text-4xl">Ceremony</h3>
-                                </div>
-                                <p>Religious ceremony<br />in Grotto Chapel</p>
-                                {/* <p>14th February</p> */}
-                                <p>1:00 PM</p>
-                                <div className="mt-6 w-full max-w-sm mx-auto">
-                                    <div className="relative aspect-square w-full overflow-hidden rounded-lg border border-white/20 shadow-lg hover:shadow-xl transition">
-                                        <iframe
-                                            className="absolute inset-0 w-full h-full"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4648.844822279911!2d91.88905907632365!3d25.56815097747407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507ebd35fdba2b%3A0xdff8f698878a1c8d!2sGrotto%20Chapel!5e0!3m2!1sen!2sin!4v1767597070538"
-                                            loading="lazy"
-                                            referrerPolicy="no-referrer-when-downgrade"
-                                        />
-                                    </div>
-                                </div>
-                                <a
-                                    href="https://www.google.com/maps/dir/?api=1&destination=25.568070104437144,91.89164639022468"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="mt-4 inline-block border px-6 py-2 rounded text-sm hover:bg-white hover:text-[#6d1221] transition"
-                                >
-                                    Get Directions
-                                </a>
-                            </motion.div>
-
-                            <motion.div
-                                initial={{ opacity: 0, x: -40 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.8 }}
-                            >
-                                <div className="flex flex-row justify-center items-center gap-0 -ml-6">
-                                    <Image
-                                        src='/icons/reception.svg'
-                                        alt="Reception"
-                                        height='0'
-                                        width='0'
-                                        sizes="100svh"
-                                        className="md:w-20 w-16 md:h-20 h-16 md:mb-4 mb-4 mr-3"
-                                    />
-                                    <h3 className="font-semibold mb-3 text-4xl">Reception</h3>
-                                </div>
-                                <p>Garrison Ground</p>
-                                {/* <p>14th February</p> */}
-                                <p>5:00 PM onwards</p><br />
-                                <div className="mt-6 w-full max-w-sm mx-auto">
-                                    <div className="relative aspect-square w-full overflow-hidden rounded-lg border border-white/20 shadow-lg hover:shadow-xl transition">
-                                        <iframe
-                                            className="absolute inset-0 w-full h-full"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4648.86699557986!2d91.87652327632368!3d25.56757977747441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8562e7798f%3A0x402d6805c4dc4151!2sGarrison%20Ground!5e0!3m2!1sen!2sin!4v1767597096587!5m2!1sen!2sin"
-                                            loading="lazy"
-                                            referrerPolicy="no-referrer-when-downgrade"
-                                        />
-                                    </div>
-                                </div>
-                                <a
-                                    href="https://www.google.com/maps/dir/?api=1&destination=25.569355069199588,91.87811017998635"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="mt-4 inline-block border px-6 py-2 rounded text-sm hover:bg-white hover:text-[#6d1221] transition"
-                                >
-                                    Get Directions
-                                </a>
-                            </motion.div>
-                        </div>
-                    </section>
 
                     {/* DRESS CODE */}
                     {/* <section className="py-16 px-6 text-center bg-[#c9a36a]">
