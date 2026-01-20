@@ -48,6 +48,8 @@ export default function WeddingInvite() {
     const searchParams = useSearchParams();
     const guestName = searchParams.get("guest") || "Friend";
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const [successMessage, setSuccessMessage] = useState("");
 
     const [rsvp, setRsvp] = useState({
@@ -147,6 +149,9 @@ export default function WeddingInvite() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (isSubmitting) return; // hard guard
+        setIsSubmitting(true);
+
         try {
             const res = await fetch("/api/rsvp", {
                 method: "POST",
@@ -519,9 +524,12 @@ export default function WeddingInvite() {
                                     {/* Submit */}
                                     <button
                                         type="submit"
-                                        className="w-full bg-[#6d1221] text-white py-3 rounded hover:opacity-90 transition"
+                                        disabled={isSubmitting}
+                                        className={`w-full bg-[#6d1221] text-white py-3 rounded transition
+        ${isSubmitting ? "opacity-60 cursor-not-allowed" : "hover:opacity-90"}
+    `}
                                     >
-                                        Submit RSVP
+                                        {isSubmitting ? "Submitting..." : "Submit RSVP"}
                                     </button>
                                 </form>
                             )}
